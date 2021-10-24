@@ -21,8 +21,8 @@ class RolesControllerTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 8041,
-            "role" => "including",
+            "id" => 9756,
+            "role" => "mouth",
         ];
         $this->dto = new RolesDto($this->input);
         $this->model = new RolesModel($this->dto);
@@ -56,7 +56,7 @@ class RolesControllerTest extends TestCase
 
     public function testInsert_ReturnsResponse(): void
     {
-        $id = 2313;
+        $id = 2629;
         $expected = ["result" => $id];
         $args = [];
 
@@ -84,9 +84,9 @@ class RolesControllerTest extends TestCase
 
     public function testUpdate_ReturnsResponse(): void
     {
-        $id = 4438;
+        $id = 6011;
         $expected = ["result" => $id];
-        $args = ["id" => 9833];
+        $args = ["id" => 1020];
 
         $this->service->expects($this->once())
             ->method("createModel")
@@ -113,7 +113,7 @@ class RolesControllerTest extends TestCase
     public function testGet_ReturnsResponse(): void
     {
         $expected = ["result" => $this->model->jsonSerialize()];
-        $args = ["id" => 1740];
+        $args = ["id" => 2655];
 
         $this->service->expects($this->once())
             ->method("get")
@@ -148,9 +148,9 @@ class RolesControllerTest extends TestCase
 
     public function testDelete_ReturnsResponse(): void
     {
-        $id = 9790;
+        $id = 8126;
         $expected = ["result" => $id];
-        $args = ["id" => 702];
+        $args = ["id" => 3846];
 
         $this->service->expects($this->once())
             ->method("delete")

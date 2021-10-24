@@ -11,8 +11,8 @@ use CRM\Contact\{ ContactDto, IContactRepository, ContactRepository };
 
 class ContactRepositoryTest extends TestCase
 {
-    private $db;
-    private $result;
+    private MockObject $db;
+    private MockObject $result;
     private array $input;
     private ContactDto $dto;
     private IContactRepository $repository;
@@ -22,36 +22,36 @@ class ContactRepositoryTest extends TestCase
         $this->db = $this->createMock("CRM\Database\IDatabase");
         $this->result = $this->createMock("CRM\Database\IDatabaseResult");
         $this->input = [
-            "id" => 3701,
-            "contact_title" => "college",
-            "contact_first" => "source",
-            "contact_middle" => "relationship",
-            "contact_last" => "maybe",
-            "lead_referral_source" => "property",
-            "date_of_initial_contact" => "2021-11-04",
-            "title" => "left",
-            "company" => "wear",
-            "industry" => "their",
-            "address" => "speak",
-            "address_street_1" => "other",
-            "address_street_2" => "outside",
-            "address_city" => "position",
-            "address_state" => "themselves",
-            "address_zip" => 411,
-            "address_country" => "however",
-            "phone" => "appear",
-            "email" => "john29@example.com",
-            "status" => 1499,
-            "website" => "happen",
-            "linkedin_profile" => "body",
-            "background_info" => "Stand different image opportunity science. Determine get interesting.",
-            "sales_rep" => 4971,
-            "rating" => 489.00,
-            "project_type" => "entire",
-            "project_description" => "Game lose address than life.",
-            "proposal_due_date" => "2021-11-16",
-            "budget" => 115.28,
-            "deliverables" => "base",
+            "id" => 1056,
+            "contact_title" => "own",
+            "contact_first" => "customer",
+            "contact_middle" => "skin",
+            "contact_last" => "vote",
+            "lead_referral_source" => "serve",
+            "date_of_initial_contact" => "2021-11-22",
+            "title" => "or",
+            "company" => "everyone",
+            "industry" => "difference",
+            "address" => "trade",
+            "address_street_1" => "second",
+            "address_street_2" => "truth",
+            "address_city" => "second",
+            "address_state" => "college",
+            "address_zip" => 6920,
+            "address_country" => "would",
+            "phone" => "later",
+            "email" => "moorepatricia@example.org",
+            "status" => 63,
+            "website" => "popular",
+            "linkedin_profile" => "PM",
+            "background_info" => "Sense prevent light information others. Natural least action lawyer film kitchen.",
+            "sales_rep" => 4747,
+            "rating" => 15.00,
+            "project_type" => "listen",
+            "project_description" => "Study adult better push population camera themselves.",
+            "proposal_due_date" => "2021-11-22",
+            "budget" => 831.25,
+            "deliverables" => "act",
         ];
         $this->dto = new ContactDto($this->input);
         $this->repository = new ContactRepository($this->db);
@@ -79,7 +79,7 @@ class ContactRepositoryTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 3817;
+        $expected = 9688;
 
         $sql = "INSERT INTO `contact` (`contact_title`, `contact_first`, `contact_middle`, `contact_last`, `lead_referral_source`, `date_of_initial_contact`, `title`, `company`, `industry`, `address`, `address_street_1`, `address_street_2`, `address_city`, `address_state`, `address_zip`, `address_country`, `phone`, `email`, `status`, `website`, `linkedin_profile`, `background_info`, `sales_rep`, `rating`, `project_type`, `project_description`, `proposal_due_date`, `budget`, `deliverables`)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -142,7 +142,7 @@ class ContactRepositoryTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 6477;
+        $expected = 9617;
 
         $sql = "UPDATE `contact` SET `contact_title` = ?, `contact_first` = ?, `contact_middle` = ?, `contact_last` = ?, `lead_referral_source` = ?, `date_of_initial_contact` = ?, `title` = ?, `company` = ?, `industry` = ?, `address` = ?, `address_street_1` = ?, `address_street_2` = ?, `address_city` = ?, `address_state` = ?, `address_zip` = ?, `address_country` = ?, `phone` = ?, `email` = ?, `status` = ?, `website` = ?, `linkedin_profile` = ?, `background_info` = ?, `sales_rep` = ?, `rating` = ?, `project_type` = ?, `project_description` = ?, `proposal_due_date` = ?, `budget` = ?, `deliverables` = ?
                 WHERE `id` = ?";
@@ -195,7 +195,7 @@ class ContactRepositoryTest extends TestCase
 
     public function testGet_ReturnsEmptyOnException(): void
     {
-        $id = 2804;
+        $id = 8855;
 
         $this->db->method("prepare")
             ->will($this->throwException(new DatabaseException()));
@@ -206,7 +206,7 @@ class ContactRepositoryTest extends TestCase
 
     public function testGet_ReturnsDto(): void
     {
-        $id = 4603;
+        $id = 8531;
 
         $sql = "SELECT `id`, `contact_title`, `contact_first`, `contact_middle`, `contact_last`, `lead_referral_source`, `date_of_initial_contact`, `title`, `company`, `industry`, `address`, `address_street_1`, `address_street_2`, `address_city`, `address_state`, `address_zip`, `address_country`, `phone`, `email`, `status`, `website`, `linkedin_profile`, `background_info`, `sales_rep`, `rating`, `project_type`, `project_description`, `proposal_due_date`, `budget`, `deliverables`
                 FROM `contact` WHERE `id` = ?";
@@ -256,7 +256,7 @@ class ContactRepositoryTest extends TestCase
 
     public function testDelete_ReturnsFailedOnException(): void
     {
-        $id = 2866;
+        $id = 6008;
         $expected = -1;
 
         $this->db->method("prepare")
@@ -268,8 +268,8 @@ class ContactRepositoryTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 7632;
-        $expected = 3323;
+        $id = 7004;
+        $expected = 8633;
 
         $sql = "DELETE FROM `contact` WHERE `id` = ?";
 

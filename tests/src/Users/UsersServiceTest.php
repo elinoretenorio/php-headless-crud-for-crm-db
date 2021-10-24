@@ -20,15 +20,15 @@ class UsersServiceTest extends TestCase
     {
         $this->repository = $this->createMock("CRM\Users\IUsersRepository");
         $this->input = [
-            "id" => 3710,
-            "name_title" => "girl",
-            "name_first" => "left",
-            "name_middle" => "trip",
-            "name_last" => "result",
-            "email" => "georgetodd@example.org",
-            "password" => "each",
-            "user_roles" => 4430,
-            "user_status" => 3419,
+            "id" => 5503,
+            "name_title" => "Republican",
+            "name_first" => "very",
+            "name_middle" => "air",
+            "name_last" => "wait",
+            "email" => "dbrown@example.org",
+            "password" => "ten",
+            "user_roles" => 2335,
+            "user_status" => 5834,
         ];
         $this->dto = new UsersDto($this->input);
         $this->model = new UsersModel($this->dto);
@@ -46,7 +46,7 @@ class UsersServiceTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 6639;
+        $expected = 6832;
 
         $this->repository->expects($this->once())
             ->method("insert")
@@ -72,7 +72,7 @@ class UsersServiceTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 8238;
+        $expected = 7734;
 
         $this->repository->expects($this->once())
             ->method("update")
@@ -98,7 +98,7 @@ class UsersServiceTest extends TestCase
 
     public function testGet_ReturnsNull(): void
     {
-        $id = 4151;
+        $id = 3927;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -111,7 +111,7 @@ class UsersServiceTest extends TestCase
 
     public function testGet_ReturnsModel(): void
     {
-        $id = 2948;
+        $id = 9024;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -144,8 +144,8 @@ class UsersServiceTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 7045;
-        $expected = 7713;
+        $id = 1240;
+        $expected = 2685;
 
         $this->repository->expects($this->once())
             ->method("delete")

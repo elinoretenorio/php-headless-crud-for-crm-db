@@ -16,8 +16,8 @@ class RolesModelTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 4191,
-            "role" => "direction",
+            "id" => 1988,
+            "role" => "drop",
         ];
         $this->dto = new RolesDto($this->input);
         $this->model = new RolesModel($this->dto);
@@ -44,7 +44,7 @@ class RolesModelTest extends TestCase
 
     public function testSetId(): void
     {
-        $expected = 8377;
+        $expected = 6721;
         $model = $this->model;
         $model->setId($expected);
 
@@ -58,7 +58,7 @@ class RolesModelTest extends TestCase
 
     public function testSetRole(): void
     {
-        $expected = "anything";
+        $expected = "mother";
         $model = $this->model;
         $model->setRole($expected);
 

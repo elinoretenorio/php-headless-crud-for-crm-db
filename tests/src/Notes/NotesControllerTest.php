@@ -21,17 +21,17 @@ class NotesControllerTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 6026,
-            "date" => "2021-11-08",
-            "notes" => "Long building evening peace blue born world.",
-            "is_new_todo" => 2746,
-            "todo_type_id" => 8737,
-            "todo_desc_id" => 5513,
-            "todo_due_date" => "interest",
-            "contact" => 9132,
-            "task_status" => 1711,
-            "task_update" => "prove",
-            "sales_rep" => 8737,
+            "id" => 5790,
+            "date" => "2021-11-04",
+            "notes" => "Image blue hard section understand save.",
+            "is_new_todo" => 1917,
+            "todo_type_id" => 8976,
+            "todo_desc_id" => 9058,
+            "todo_due_date" => "anyone",
+            "contact" => 7652,
+            "task_status" => 7090,
+            "task_update" => "why",
+            "sales_rep" => 5964,
         ];
         $this->dto = new NotesDto($this->input);
         $this->model = new NotesModel($this->dto);
@@ -65,7 +65,7 @@ class NotesControllerTest extends TestCase
 
     public function testInsert_ReturnsResponse(): void
     {
-        $id = 1779;
+        $id = 6550;
         $expected = ["result" => $id];
         $args = [];
 
@@ -93,9 +93,9 @@ class NotesControllerTest extends TestCase
 
     public function testUpdate_ReturnsResponse(): void
     {
-        $id = 6117;
+        $id = 4025;
         $expected = ["result" => $id];
-        $args = ["id" => 9369];
+        $args = ["id" => 2488];
 
         $this->service->expects($this->once())
             ->method("createModel")
@@ -122,7 +122,7 @@ class NotesControllerTest extends TestCase
     public function testGet_ReturnsResponse(): void
     {
         $expected = ["result" => $this->model->jsonSerialize()];
-        $args = ["id" => 5454];
+        $args = ["id" => 772];
 
         $this->service->expects($this->once())
             ->method("get")
@@ -157,9 +157,9 @@ class NotesControllerTest extends TestCase
 
     public function testDelete_ReturnsResponse(): void
     {
-        $id = 1826;
+        $id = 1839;
         $expected = ["result" => $id];
-        $args = ["id" => 8525];
+        $args = ["id" => 3100];
 
         $this->service->expects($this->once())
             ->method("delete")

@@ -11,8 +11,8 @@ use CRM\Users\{ UsersDto, IUsersRepository, UsersRepository };
 
 class UsersRepositoryTest extends TestCase
 {
-    private $db;
-    private $result;
+    private MockObject $db;
+    private MockObject $result;
     private array $input;
     private UsersDto $dto;
     private IUsersRepository $repository;
@@ -22,15 +22,15 @@ class UsersRepositoryTest extends TestCase
         $this->db = $this->createMock("CRM\Database\IDatabase");
         $this->result = $this->createMock("CRM\Database\IDatabaseResult");
         $this->input = [
-            "id" => 4418,
-            "name_title" => "get",
-            "name_first" => "notice",
-            "name_middle" => "argue",
-            "name_last" => "nice",
-            "email" => "sheila12@example.net",
-            "password" => "among",
-            "user_roles" => 8345,
-            "user_status" => 9547,
+            "id" => 6610,
+            "name_title" => "major",
+            "name_first" => "movement",
+            "name_middle" => "not",
+            "name_last" => "plant",
+            "email" => "carly57@example.net",
+            "password" => "she",
+            "user_roles" => 7463,
+            "user_status" => 3391,
         ];
         $this->dto = new UsersDto($this->input);
         $this->repository = new UsersRepository($this->db);
@@ -58,7 +58,7 @@ class UsersRepositoryTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 2163;
+        $expected = 331;
 
         $sql = "INSERT INTO `users` (`name_title`, `name_first`, `name_middle`, `name_last`, `email`, `password`, `user_roles`, `user_status`)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
@@ -100,7 +100,7 @@ class UsersRepositoryTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 1182;
+        $expected = 2088;
 
         $sql = "UPDATE `users` SET `name_title` = ?, `name_first` = ?, `name_middle` = ?, `name_last` = ?, `email` = ?, `password` = ?, `user_roles` = ?, `user_status` = ?
                 WHERE `id` = ?";
@@ -132,7 +132,7 @@ class UsersRepositoryTest extends TestCase
 
     public function testGet_ReturnsEmptyOnException(): void
     {
-        $id = 6586;
+        $id = 3232;
 
         $this->db->method("prepare")
             ->will($this->throwException(new DatabaseException()));
@@ -143,7 +143,7 @@ class UsersRepositoryTest extends TestCase
 
     public function testGet_ReturnsDto(): void
     {
-        $id = 1642;
+        $id = 702;
 
         $sql = "SELECT `id`, `name_title`, `name_first`, `name_middle`, `name_last`, `email`, `password`, `user_roles`, `user_status`
                 FROM `users` WHERE `id` = ?";
@@ -193,7 +193,7 @@ class UsersRepositoryTest extends TestCase
 
     public function testDelete_ReturnsFailedOnException(): void
     {
-        $id = 7616;
+        $id = 5429;
         $expected = -1;
 
         $this->db->method("prepare")
@@ -205,8 +205,8 @@ class UsersRepositoryTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 3999;
-        $expected = 4896;
+        $id = 5564;
+        $expected = 1023;
 
         $sql = "DELETE FROM `users` WHERE `id` = ?";
 

@@ -8,7 +8,7 @@ use PDO;
 
 class PdoDatabase implements IDatabase
 {
-    private $db;
+    private PDO $db;
 
     public function __construct(PDO $db) 
     {

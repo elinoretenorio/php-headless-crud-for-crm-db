@@ -16,36 +16,36 @@ class ContactModelTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 2488,
-            "contact_title" => "talk",
-            "contact_first" => "condition",
-            "contact_middle" => "us",
-            "contact_last" => "accept",
-            "lead_referral_source" => "you",
+            "id" => 8596,
+            "contact_title" => "detail",
+            "contact_first" => "only",
+            "contact_middle" => "Republican",
+            "contact_last" => "conference",
+            "lead_referral_source" => "experience",
             "date_of_initial_contact" => "2021-11-06",
-            "title" => "attorney",
-            "company" => "she",
-            "industry" => "cultural",
-            "address" => "focus",
-            "address_street_1" => "police",
-            "address_street_2" => "policy",
-            "address_city" => "recognize",
-            "address_state" => "certain",
-            "address_zip" => 2710,
-            "address_country" => "time",
-            "phone" => "consider",
-            "email" => "mariahchapman@example.org",
-            "status" => 867,
-            "website" => "deep",
-            "linkedin_profile" => "who",
-            "background_info" => "Black hot actually care attorney accept machine. Will stuff whose player among strong cost. Music real whom sense like water around hand. Kind issue head animal prepare huge still evening.",
-            "sales_rep" => 8933,
-            "rating" => 119.54,
-            "project_type" => "sometimes",
-            "project_description" => "Fly can issue especially door.",
+            "title" => "believe",
+            "company" => "test",
+            "industry" => "drive",
+            "address" => "station",
+            "address_street_1" => "individual",
+            "address_street_2" => "no",
+            "address_city" => "letter",
+            "address_state" => "hear",
+            "address_zip" => 45,
+            "address_country" => "total",
+            "phone" => "education",
+            "email" => "michael47@example.net",
+            "status" => 9243,
+            "website" => "book",
+            "linkedin_profile" => "trouble",
+            "background_info" => "American poor tend team environmental. Together effect need health suffer foot. Range heavy term clearly above close.",
+            "sales_rep" => 2154,
+            "rating" => 776.00,
+            "project_type" => "resource",
+            "project_description" => "Decision performance else analysis idea.",
             "proposal_due_date" => "2021-11-17",
-            "budget" => 426.39,
-            "deliverables" => "western",
+            "budget" => 183.14,
+            "deliverables" => "several",
         ];
         $this->dto = new ContactDto($this->input);
         $this->model = new ContactModel($this->dto);
@@ -72,7 +72,7 @@ class ContactModelTest extends TestCase
 
     public function testSetId(): void
     {
-        $expected = 5528;
+        $expected = 9659;
         $model = $this->model;
         $model->setId($expected);
 
@@ -86,7 +86,7 @@ class ContactModelTest extends TestCase
 
     public function testSetContactTitle(): void
     {
-        $expected = "president";
+        $expected = "help";
         $model = $this->model;
         $model->setContactTitle($expected);
 
@@ -100,7 +100,7 @@ class ContactModelTest extends TestCase
 
     public function testSetContactFirst(): void
     {
-        $expected = "fall";
+        $expected = "before";
         $model = $this->model;
         $model->setContactFirst($expected);
 
@@ -114,7 +114,7 @@ class ContactModelTest extends TestCase
 
     public function testSetContactMiddle(): void
     {
-        $expected = "suggest";
+        $expected = "president";
         $model = $this->model;
         $model->setContactMiddle($expected);
 
@@ -128,7 +128,7 @@ class ContactModelTest extends TestCase
 
     public function testSetContactLast(): void
     {
-        $expected = "natural";
+        $expected = "floor";
         $model = $this->model;
         $model->setContactLast($expected);
 
@@ -142,7 +142,7 @@ class ContactModelTest extends TestCase
 
     public function testSetLeadReferralSource(): void
     {
-        $expected = "maybe";
+        $expected = "enough";
         $model = $this->model;
         $model->setLeadReferralSource($expected);
 
@@ -156,7 +156,7 @@ class ContactModelTest extends TestCase
 
     public function testSetDateOfInitialContact(): void
     {
-        $expected = "2021-11-16";
+        $expected = "2021-10-27";
         $model = $this->model;
         $model->setDateOfInitialContact($expected);
 
@@ -170,7 +170,7 @@ class ContactModelTest extends TestCase
 
     public function testSetTitle(): void
     {
-        $expected = "media";
+        $expected = "forward";
         $model = $this->model;
         $model->setTitle($expected);
 
@@ -184,7 +184,7 @@ class ContactModelTest extends TestCase
 
     public function testSetCompany(): void
     {
-        $expected = "herself";
+        $expected = "environment";
         $model = $this->model;
         $model->setCompany($expected);
 
@@ -198,7 +198,7 @@ class ContactModelTest extends TestCase
 
     public function testSetIndustry(): void
     {
-        $expected = "pull";
+        $expected = "level";
         $model = $this->model;
         $model->setIndustry($expected);
 
@@ -212,7 +212,7 @@ class ContactModelTest extends TestCase
 
     public function testSetAddress(): void
     {
-        $expected = "heart";
+        $expected = "later";
         $model = $this->model;
         $model->setAddress($expected);
 
@@ -226,7 +226,7 @@ class ContactModelTest extends TestCase
 
     public function testSetAddressStreet1(): void
     {
-        $expected = "policy";
+        $expected = "recent";
         $model = $this->model;
         $model->setAddressStreet1($expected);
 
@@ -240,7 +240,7 @@ class ContactModelTest extends TestCase
 
     public function testSetAddressStreet2(): void
     {
-        $expected = "it";
+        $expected = "check";
         $model = $this->model;
         $model->setAddressStreet2($expected);
 
@@ -254,7 +254,7 @@ class ContactModelTest extends TestCase
 
     public function testSetAddressCity(): void
     {
-        $expected = "charge";
+        $expected = "plant";
         $model = $this->model;
         $model->setAddressCity($expected);
 
@@ -268,7 +268,7 @@ class ContactModelTest extends TestCase
 
     public function testSetAddressState(): void
     {
-        $expected = "agree";
+        $expected = "cold";
         $model = $this->model;
         $model->setAddressState($expected);
 
@@ -282,7 +282,7 @@ class ContactModelTest extends TestCase
 
     public function testSetAddressZip(): void
     {
-        $expected = 9545;
+        $expected = 4305;
         $model = $this->model;
         $model->setAddressZip($expected);
 
@@ -296,7 +296,7 @@ class ContactModelTest extends TestCase
 
     public function testSetAddressCountry(): void
     {
-        $expected = "situation";
+        $expected = "difference";
         $model = $this->model;
         $model->setAddressCountry($expected);
 
@@ -310,7 +310,7 @@ class ContactModelTest extends TestCase
 
     public function testSetPhone(): void
     {
-        $expected = "them";
+        $expected = "hair";
         $model = $this->model;
         $model->setPhone($expected);
 
@@ -324,7 +324,7 @@ class ContactModelTest extends TestCase
 
     public function testSetEmail(): void
     {
-        $expected = "davidscott@example.com";
+        $expected = "pittsshawn@example.net";
         $model = $this->model;
         $model->setEmail($expected);
 
@@ -338,7 +338,7 @@ class ContactModelTest extends TestCase
 
     public function testSetStatus(): void
     {
-        $expected = 8176;
+        $expected = 7168;
         $model = $this->model;
         $model->setStatus($expected);
 
@@ -352,7 +352,7 @@ class ContactModelTest extends TestCase
 
     public function testSetWebsite(): void
     {
-        $expected = "mean";
+        $expected = "concern";
         $model = $this->model;
         $model->setWebsite($expected);
 
@@ -366,7 +366,7 @@ class ContactModelTest extends TestCase
 
     public function testSetLinkedinProfile(): void
     {
-        $expected = "project";
+        $expected = "minute";
         $model = $this->model;
         $model->setLinkedinProfile($expected);
 
@@ -380,7 +380,7 @@ class ContactModelTest extends TestCase
 
     public function testSetBackgroundInfo(): void
     {
-        $expected = "Laugh plant enter owner over. Walk long affect. Alone author different similar remain modern water.";
+        $expected = "Speak economy development article hotel individual else. Herself gun available create industry understand. Report tonight head job treatment majority nation.";
         $model = $this->model;
         $model->setBackgroundInfo($expected);
 
@@ -394,7 +394,7 @@ class ContactModelTest extends TestCase
 
     public function testSetSalesRep(): void
     {
-        $expected = 4645;
+        $expected = 7445;
         $model = $this->model;
         $model->setSalesRep($expected);
 
@@ -408,7 +408,7 @@ class ContactModelTest extends TestCase
 
     public function testSetRating(): void
     {
-        $expected = 901.84;
+        $expected = 425.00;
         $model = $this->model;
         $model->setRating($expected);
 
@@ -422,7 +422,7 @@ class ContactModelTest extends TestCase
 
     public function testSetProjectType(): void
     {
-        $expected = "most";
+        $expected = "organization";
         $model = $this->model;
         $model->setProjectType($expected);
 
@@ -436,7 +436,7 @@ class ContactModelTest extends TestCase
 
     public function testSetProjectDescription(): void
     {
-        $expected = "Out Democrat total.";
+        $expected = "Try little area learn fill take risk top.";
         $model = $this->model;
         $model->setProjectDescription($expected);
 
@@ -450,7 +450,7 @@ class ContactModelTest extends TestCase
 
     public function testSetProposalDueDate(): void
     {
-        $expected = "2021-11-07";
+        $expected = "2021-11-09";
         $model = $this->model;
         $model->setProposalDueDate($expected);
 
@@ -464,7 +464,7 @@ class ContactModelTest extends TestCase
 
     public function testSetBudget(): void
     {
-        $expected = 190.00;
+        $expected = 770.55;
         $model = $this->model;
         $model->setBudget($expected);
 
@@ -478,7 +478,7 @@ class ContactModelTest extends TestCase
 
     public function testSetDeliverables(): void
     {
-        $expected = "answer";
+        $expected = "subject";
         $model = $this->model;
         $model->setDeliverables($expected);
 

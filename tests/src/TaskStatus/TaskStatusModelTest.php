@@ -16,8 +16,8 @@ class TaskStatusModelTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 1756,
-            "status" => "instead",
+            "id" => 3051,
+            "status" => "three",
         ];
         $this->dto = new TaskStatusDto($this->input);
         $this->model = new TaskStatusModel($this->dto);
@@ -44,7 +44,7 @@ class TaskStatusModelTest extends TestCase
 
     public function testSetId(): void
     {
-        $expected = 6753;
+        $expected = 3879;
         $model = $this->model;
         $model->setId($expected);
 
@@ -58,7 +58,7 @@ class TaskStatusModelTest extends TestCase
 
     public function testSetStatus(): void
     {
-        $expected = "measure";
+        $expected = "perform";
         $model = $this->model;
         $model->setStatus($expected);
 

@@ -20,8 +20,8 @@ class TodoTypeServiceTest extends TestCase
     {
         $this->repository = $this->createMock("CRM\TodoType\ITodoTypeRepository");
         $this->input = [
-            "id" => 6450,
-            "type" => "begin",
+            "id" => 9693,
+            "type" => "establish",
         ];
         $this->dto = new TodoTypeDto($this->input);
         $this->model = new TodoTypeModel($this->dto);
@@ -39,7 +39,7 @@ class TodoTypeServiceTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 5149;
+        $expected = 4794;
 
         $this->repository->expects($this->once())
             ->method("insert")
@@ -65,7 +65,7 @@ class TodoTypeServiceTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 4760;
+        $expected = 5480;
 
         $this->repository->expects($this->once())
             ->method("update")
@@ -91,7 +91,7 @@ class TodoTypeServiceTest extends TestCase
 
     public function testGet_ReturnsNull(): void
     {
-        $id = 9573;
+        $id = 5402;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -104,7 +104,7 @@ class TodoTypeServiceTest extends TestCase
 
     public function testGet_ReturnsModel(): void
     {
-        $id = 2722;
+        $id = 6936;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -137,8 +137,8 @@ class TodoTypeServiceTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 3030;
-        $expected = 9523;
+        $id = 6051;
+        $expected = 1253;
 
         $this->repository->expects($this->once())
             ->method("delete")

@@ -11,8 +11,8 @@ use CRM\ContactStatus\{ ContactStatusDto, IContactStatusRepository, ContactStatu
 
 class ContactStatusRepositoryTest extends TestCase
 {
-    private $db;
-    private $result;
+    private MockObject $db;
+    private MockObject $result;
     private array $input;
     private ContactStatusDto $dto;
     private IContactStatusRepository $repository;
@@ -22,8 +22,8 @@ class ContactStatusRepositoryTest extends TestCase
         $this->db = $this->createMock("CRM\Database\IDatabase");
         $this->result = $this->createMock("CRM\Database\IDatabaseResult");
         $this->input = [
-            "id" => 5368,
-            "status" => "ok",
+            "id" => 2355,
+            "status" => "catch",
         ];
         $this->dto = new ContactStatusDto($this->input);
         $this->repository = new ContactStatusRepository($this->db);
@@ -51,7 +51,7 @@ class ContactStatusRepositoryTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 9429;
+        $expected = 146;
 
         $sql = "INSERT INTO `contact_status` (`status`)
                 VALUES (?)";
@@ -86,7 +86,7 @@ class ContactStatusRepositoryTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 2308;
+        $expected = 8426;
 
         $sql = "UPDATE `contact_status` SET `status` = ?
                 WHERE `id` = ?";
@@ -111,7 +111,7 @@ class ContactStatusRepositoryTest extends TestCase
 
     public function testGet_ReturnsEmptyOnException(): void
     {
-        $id = 3653;
+        $id = 151;
 
         $this->db->method("prepare")
             ->will($this->throwException(new DatabaseException()));
@@ -122,7 +122,7 @@ class ContactStatusRepositoryTest extends TestCase
 
     public function testGet_ReturnsDto(): void
     {
-        $id = 5411;
+        $id = 8106;
 
         $sql = "SELECT `id`, `status`
                 FROM `contact_status` WHERE `id` = ?";
@@ -172,7 +172,7 @@ class ContactStatusRepositoryTest extends TestCase
 
     public function testDelete_ReturnsFailedOnException(): void
     {
-        $id = 1408;
+        $id = 6831;
         $expected = -1;
 
         $this->db->method("prepare")
@@ -184,8 +184,8 @@ class ContactStatusRepositoryTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 6743;
-        $expected = 7931;
+        $id = 8535;
+        $expected = 7467;
 
         $sql = "DELETE FROM `contact_status` WHERE `id` = ?";
 

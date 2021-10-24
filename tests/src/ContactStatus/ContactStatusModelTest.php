@@ -16,8 +16,8 @@ class ContactStatusModelTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 7527,
-            "status" => "toward",
+            "id" => 571,
+            "status" => "design",
         ];
         $this->dto = new ContactStatusDto($this->input);
         $this->model = new ContactStatusModel($this->dto);
@@ -44,7 +44,7 @@ class ContactStatusModelTest extends TestCase
 
     public function testSetId(): void
     {
-        $expected = 8059;
+        $expected = 1509;
         $model = $this->model;
         $model->setId($expected);
 
@@ -58,7 +58,7 @@ class ContactStatusModelTest extends TestCase
 
     public function testSetStatus(): void
     {
-        $expected = "local";
+        $expected = "interview";
         $model = $this->model;
         $model->setStatus($expected);
 

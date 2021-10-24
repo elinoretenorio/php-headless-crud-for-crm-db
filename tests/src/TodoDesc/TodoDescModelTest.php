@@ -16,8 +16,8 @@ class TodoDescModelTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 4153,
-            "description" => "PM",
+            "id" => 9316,
+            "description" => "lawyer",
         ];
         $this->dto = new TodoDescDto($this->input);
         $this->model = new TodoDescModel($this->dto);
@@ -44,7 +44,7 @@ class TodoDescModelTest extends TestCase
 
     public function testSetId(): void
     {
-        $expected = 9633;
+        $expected = 7847;
         $model = $this->model;
         $model->setId($expected);
 
@@ -58,7 +58,7 @@ class TodoDescModelTest extends TestCase
 
     public function testSetDescription(): void
     {
-        $expected = "it";
+        $expected = "discuss";
         $model = $this->model;
         $model->setDescription($expected);
 

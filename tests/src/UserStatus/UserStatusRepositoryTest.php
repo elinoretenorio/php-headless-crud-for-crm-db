@@ -11,8 +11,8 @@ use CRM\UserStatus\{ UserStatusDto, IUserStatusRepository, UserStatusRepository 
 
 class UserStatusRepositoryTest extends TestCase
 {
-    private $db;
-    private $result;
+    private MockObject $db;
+    private MockObject $result;
     private array $input;
     private UserStatusDto $dto;
     private IUserStatusRepository $repository;
@@ -22,8 +22,8 @@ class UserStatusRepositoryTest extends TestCase
         $this->db = $this->createMock("CRM\Database\IDatabase");
         $this->result = $this->createMock("CRM\Database\IDatabaseResult");
         $this->input = [
-            "id" => 4590,
-            "status" => "occur",
+            "id" => 5099,
+            "status" => "fill",
         ];
         $this->dto = new UserStatusDto($this->input);
         $this->repository = new UserStatusRepository($this->db);
@@ -51,7 +51,7 @@ class UserStatusRepositoryTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 3926;
+        $expected = 267;
 
         $sql = "INSERT INTO `user_status` (`status`)
                 VALUES (?)";
@@ -86,7 +86,7 @@ class UserStatusRepositoryTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 4371;
+        $expected = 9587;
 
         $sql = "UPDATE `user_status` SET `status` = ?
                 WHERE `id` = ?";
@@ -111,7 +111,7 @@ class UserStatusRepositoryTest extends TestCase
 
     public function testGet_ReturnsEmptyOnException(): void
     {
-        $id = 9339;
+        $id = 1989;
 
         $this->db->method("prepare")
             ->will($this->throwException(new DatabaseException()));
@@ -122,7 +122,7 @@ class UserStatusRepositoryTest extends TestCase
 
     public function testGet_ReturnsDto(): void
     {
-        $id = 2274;
+        $id = 8247;
 
         $sql = "SELECT `id`, `status`
                 FROM `user_status` WHERE `id` = ?";
@@ -172,7 +172,7 @@ class UserStatusRepositoryTest extends TestCase
 
     public function testDelete_ReturnsFailedOnException(): void
     {
-        $id = 8966;
+        $id = 3104;
         $expected = -1;
 
         $this->db->method("prepare")
@@ -184,8 +184,8 @@ class UserStatusRepositoryTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 2499;
-        $expected = 1916;
+        $id = 3326;
+        $expected = 1447;
 
         $sql = "DELETE FROM `user_status` WHERE `id` = ?";
 

@@ -11,8 +11,8 @@ use CRM\Notes\{ NotesDto, INotesRepository, NotesRepository };
 
 class NotesRepositoryTest extends TestCase
 {
-    private $db;
-    private $result;
+    private MockObject $db;
+    private MockObject $result;
     private array $input;
     private NotesDto $dto;
     private INotesRepository $repository;
@@ -22,17 +22,17 @@ class NotesRepositoryTest extends TestCase
         $this->db = $this->createMock("CRM\Database\IDatabase");
         $this->result = $this->createMock("CRM\Database\IDatabaseResult");
         $this->input = [
-            "id" => 4870,
-            "date" => "2021-11-07",
-            "notes" => "Degree half talk cut market soldier.",
-            "is_new_todo" => 3241,
-            "todo_type_id" => 7184,
-            "todo_desc_id" => 7317,
-            "todo_due_date" => "quite",
-            "contact" => 5996,
-            "task_status" => 697,
-            "task_update" => "agency",
-            "sales_rep" => 320,
+            "id" => 8932,
+            "date" => "2021-11-17",
+            "notes" => "Become something exactly.",
+            "is_new_todo" => 1899,
+            "todo_type_id" => 3099,
+            "todo_desc_id" => 9729,
+            "todo_due_date" => "light",
+            "contact" => 3356,
+            "task_status" => 9723,
+            "task_update" => "price",
+            "sales_rep" => 3335,
         ];
         $this->dto = new NotesDto($this->input);
         $this->repository = new NotesRepository($this->db);
@@ -60,7 +60,7 @@ class NotesRepositoryTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 7529;
+        $expected = 9381;
 
         $sql = "INSERT INTO `notes` (`date`, `notes`, `is_new_todo`, `todo_type_id`, `todo_desc_id`, `todo_due_date`, `contact`, `task_status`, `task_update`, `sales_rep`)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -104,7 +104,7 @@ class NotesRepositoryTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 1241;
+        $expected = 1466;
 
         $sql = "UPDATE `notes` SET `date` = ?, `notes` = ?, `is_new_todo` = ?, `todo_type_id` = ?, `todo_desc_id` = ?, `todo_due_date` = ?, `contact` = ?, `task_status` = ?, `task_update` = ?, `sales_rep` = ?
                 WHERE `id` = ?";
@@ -138,7 +138,7 @@ class NotesRepositoryTest extends TestCase
 
     public function testGet_ReturnsEmptyOnException(): void
     {
-        $id = 7827;
+        $id = 2090;
 
         $this->db->method("prepare")
             ->will($this->throwException(new DatabaseException()));
@@ -149,7 +149,7 @@ class NotesRepositoryTest extends TestCase
 
     public function testGet_ReturnsDto(): void
     {
-        $id = 7715;
+        $id = 5306;
 
         $sql = "SELECT `id`, `date`, `notes`, `is_new_todo`, `todo_type_id`, `todo_desc_id`, `todo_due_date`, `contact`, `task_status`, `task_update`, `sales_rep`
                 FROM `notes` WHERE `id` = ?";
@@ -199,7 +199,7 @@ class NotesRepositoryTest extends TestCase
 
     public function testDelete_ReturnsFailedOnException(): void
     {
-        $id = 2791;
+        $id = 9483;
         $expected = -1;
 
         $this->db->method("prepare")
@@ -211,8 +211,8 @@ class NotesRepositoryTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 8645;
-        $expected = 2542;
+        $id = 6700;
+        $expected = 3963;
 
         $sql = "DELETE FROM `notes` WHERE `id` = ?";
 

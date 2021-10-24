@@ -11,8 +11,8 @@ use CRM\TodoType\{ TodoTypeDto, ITodoTypeRepository, TodoTypeRepository };
 
 class TodoTypeRepositoryTest extends TestCase
 {
-    private $db;
-    private $result;
+    private MockObject $db;
+    private MockObject $result;
     private array $input;
     private TodoTypeDto $dto;
     private ITodoTypeRepository $repository;
@@ -22,8 +22,8 @@ class TodoTypeRepositoryTest extends TestCase
         $this->db = $this->createMock("CRM\Database\IDatabase");
         $this->result = $this->createMock("CRM\Database\IDatabaseResult");
         $this->input = [
-            "id" => 2920,
-            "type" => "guy",
+            "id" => 9003,
+            "type" => "down",
         ];
         $this->dto = new TodoTypeDto($this->input);
         $this->repository = new TodoTypeRepository($this->db);
@@ -51,7 +51,7 @@ class TodoTypeRepositoryTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 6069;
+        $expected = 6249;
 
         $sql = "INSERT INTO `todo_type` (`type`)
                 VALUES (?)";
@@ -86,7 +86,7 @@ class TodoTypeRepositoryTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 7413;
+        $expected = 1840;
 
         $sql = "UPDATE `todo_type` SET `type` = ?
                 WHERE `id` = ?";
@@ -111,7 +111,7 @@ class TodoTypeRepositoryTest extends TestCase
 
     public function testGet_ReturnsEmptyOnException(): void
     {
-        $id = 2324;
+        $id = 1526;
 
         $this->db->method("prepare")
             ->will($this->throwException(new DatabaseException()));
@@ -122,7 +122,7 @@ class TodoTypeRepositoryTest extends TestCase
 
     public function testGet_ReturnsDto(): void
     {
-        $id = 9019;
+        $id = 9815;
 
         $sql = "SELECT `id`, `type`
                 FROM `todo_type` WHERE `id` = ?";
@@ -172,7 +172,7 @@ class TodoTypeRepositoryTest extends TestCase
 
     public function testDelete_ReturnsFailedOnException(): void
     {
-        $id = 3773;
+        $id = 7363;
         $expected = -1;
 
         $this->db->method("prepare")
@@ -184,8 +184,8 @@ class TodoTypeRepositoryTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 5107;
-        $expected = 7068;
+        $id = 8118;
+        $expected = 1206;
 
         $sql = "DELETE FROM `todo_type` WHERE `id` = ?";
 

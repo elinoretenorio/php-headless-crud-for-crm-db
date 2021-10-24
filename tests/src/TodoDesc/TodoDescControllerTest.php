@@ -21,8 +21,8 @@ class TodoDescControllerTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 413,
-            "description" => "data",
+            "id" => 9878,
+            "description" => "improve",
         ];
         $this->dto = new TodoDescDto($this->input);
         $this->model = new TodoDescModel($this->dto);
@@ -56,7 +56,7 @@ class TodoDescControllerTest extends TestCase
 
     public function testInsert_ReturnsResponse(): void
     {
-        $id = 3550;
+        $id = 5257;
         $expected = ["result" => $id];
         $args = [];
 
@@ -84,9 +84,9 @@ class TodoDescControllerTest extends TestCase
 
     public function testUpdate_ReturnsResponse(): void
     {
-        $id = 2590;
+        $id = 924;
         $expected = ["result" => $id];
-        $args = ["id" => 7765];
+        $args = ["id" => 3735];
 
         $this->service->expects($this->once())
             ->method("createModel")
@@ -113,7 +113,7 @@ class TodoDescControllerTest extends TestCase
     public function testGet_ReturnsResponse(): void
     {
         $expected = ["result" => $this->model->jsonSerialize()];
-        $args = ["id" => 1365];
+        $args = ["id" => 9648];
 
         $this->service->expects($this->once())
             ->method("get")
@@ -148,9 +148,9 @@ class TodoDescControllerTest extends TestCase
 
     public function testDelete_ReturnsResponse(): void
     {
-        $id = 402;
+        $id = 2217;
         $expected = ["result" => $id];
-        $args = ["id" => 2324];
+        $args = ["id" => 5647];
 
         $this->service->expects($this->once())
             ->method("delete")

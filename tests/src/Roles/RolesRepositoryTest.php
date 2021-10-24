@@ -11,8 +11,8 @@ use CRM\Roles\{ RolesDto, IRolesRepository, RolesRepository };
 
 class RolesRepositoryTest extends TestCase
 {
-    private $db;
-    private $result;
+    private MockObject $db;
+    private MockObject $result;
     private array $input;
     private RolesDto $dto;
     private IRolesRepository $repository;
@@ -22,8 +22,8 @@ class RolesRepositoryTest extends TestCase
         $this->db = $this->createMock("CRM\Database\IDatabase");
         $this->result = $this->createMock("CRM\Database\IDatabaseResult");
         $this->input = [
-            "id" => 2706,
-            "role" => "safe",
+            "id" => 1809,
+            "role" => "age",
         ];
         $this->dto = new RolesDto($this->input);
         $this->repository = new RolesRepository($this->db);
@@ -51,7 +51,7 @@ class RolesRepositoryTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 3916;
+        $expected = 1975;
 
         $sql = "INSERT INTO `roles` (`role`)
                 VALUES (?)";
@@ -86,7 +86,7 @@ class RolesRepositoryTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 5661;
+        $expected = 9439;
 
         $sql = "UPDATE `roles` SET `role` = ?
                 WHERE `id` = ?";
@@ -111,7 +111,7 @@ class RolesRepositoryTest extends TestCase
 
     public function testGet_ReturnsEmptyOnException(): void
     {
-        $id = 7389;
+        $id = 3514;
 
         $this->db->method("prepare")
             ->will($this->throwException(new DatabaseException()));
@@ -122,7 +122,7 @@ class RolesRepositoryTest extends TestCase
 
     public function testGet_ReturnsDto(): void
     {
-        $id = 9526;
+        $id = 4649;
 
         $sql = "SELECT `id`, `role`
                 FROM `roles` WHERE `id` = ?";
@@ -172,7 +172,7 @@ class RolesRepositoryTest extends TestCase
 
     public function testDelete_ReturnsFailedOnException(): void
     {
-        $id = 1991;
+        $id = 461;
         $expected = -1;
 
         $this->db->method("prepare")
@@ -184,8 +184,8 @@ class RolesRepositoryTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 761;
-        $expected = 4264;
+        $id = 4023;
+        $expected = 4863;
 
         $sql = "DELETE FROM `roles` WHERE `id` = ?";
 

@@ -11,8 +11,8 @@ use CRM\TaskStatus\{ TaskStatusDto, ITaskStatusRepository, TaskStatusRepository 
 
 class TaskStatusRepositoryTest extends TestCase
 {
-    private $db;
-    private $result;
+    private MockObject $db;
+    private MockObject $result;
     private array $input;
     private TaskStatusDto $dto;
     private ITaskStatusRepository $repository;
@@ -22,8 +22,8 @@ class TaskStatusRepositoryTest extends TestCase
         $this->db = $this->createMock("CRM\Database\IDatabase");
         $this->result = $this->createMock("CRM\Database\IDatabaseResult");
         $this->input = [
-            "id" => 5606,
-            "status" => "relationship",
+            "id" => 9799,
+            "status" => "hotel",
         ];
         $this->dto = new TaskStatusDto($this->input);
         $this->repository = new TaskStatusRepository($this->db);
@@ -51,7 +51,7 @@ class TaskStatusRepositoryTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 273;
+        $expected = 2663;
 
         $sql = "INSERT INTO `task_status` (`status`)
                 VALUES (?)";
@@ -86,7 +86,7 @@ class TaskStatusRepositoryTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 4907;
+        $expected = 3043;
 
         $sql = "UPDATE `task_status` SET `status` = ?
                 WHERE `id` = ?";
@@ -111,7 +111,7 @@ class TaskStatusRepositoryTest extends TestCase
 
     public function testGet_ReturnsEmptyOnException(): void
     {
-        $id = 2730;
+        $id = 1798;
 
         $this->db->method("prepare")
             ->will($this->throwException(new DatabaseException()));
@@ -122,7 +122,7 @@ class TaskStatusRepositoryTest extends TestCase
 
     public function testGet_ReturnsDto(): void
     {
-        $id = 3115;
+        $id = 9619;
 
         $sql = "SELECT `id`, `status`
                 FROM `task_status` WHERE `id` = ?";
@@ -172,7 +172,7 @@ class TaskStatusRepositoryTest extends TestCase
 
     public function testDelete_ReturnsFailedOnException(): void
     {
-        $id = 8136;
+        $id = 8144;
         $expected = -1;
 
         $this->db->method("prepare")
@@ -184,8 +184,8 @@ class TaskStatusRepositoryTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 7229;
-        $expected = 2794;
+        $id = 9295;
+        $expected = 7201;
 
         $sql = "DELETE FROM `task_status` WHERE `id` = ?";
 

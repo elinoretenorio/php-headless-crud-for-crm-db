@@ -16,8 +16,8 @@ class TodoTypeModelTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 5955,
-            "type" => "environmental",
+            "id" => 2225,
+            "type" => "behind",
         ];
         $this->dto = new TodoTypeDto($this->input);
         $this->model = new TodoTypeModel($this->dto);
@@ -44,7 +44,7 @@ class TodoTypeModelTest extends TestCase
 
     public function testSetId(): void
     {
-        $expected = 1174;
+        $expected = 667;
         $model = $this->model;
         $model->setId($expected);
 
@@ -58,7 +58,7 @@ class TodoTypeModelTest extends TestCase
 
     public function testSetType(): void
     {
-        $expected = "individual";
+        $expected = "tree";
         $model = $this->model;
         $model->setType($expected);
 

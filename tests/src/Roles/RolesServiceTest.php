@@ -20,8 +20,8 @@ class RolesServiceTest extends TestCase
     {
         $this->repository = $this->createMock("CRM\Roles\IRolesRepository");
         $this->input = [
-            "id" => 5725,
-            "role" => "method",
+            "id" => 6724,
+            "role" => "role",
         ];
         $this->dto = new RolesDto($this->input);
         $this->model = new RolesModel($this->dto);
@@ -39,7 +39,7 @@ class RolesServiceTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 460;
+        $expected = 3860;
 
         $this->repository->expects($this->once())
             ->method("insert")
@@ -65,7 +65,7 @@ class RolesServiceTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 1552;
+        $expected = 5607;
 
         $this->repository->expects($this->once())
             ->method("update")
@@ -91,7 +91,7 @@ class RolesServiceTest extends TestCase
 
     public function testGet_ReturnsNull(): void
     {
-        $id = 2230;
+        $id = 2499;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -104,7 +104,7 @@ class RolesServiceTest extends TestCase
 
     public function testGet_ReturnsModel(): void
     {
-        $id = 531;
+        $id = 9578;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -137,8 +137,8 @@ class RolesServiceTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 4639;
-        $expected = 3721;
+        $id = 5731;
+        $expected = 8488;
 
         $this->repository->expects($this->once())
             ->method("delete")

@@ -20,8 +20,8 @@ class ContactStatusServiceTest extends TestCase
     {
         $this->repository = $this->createMock("CRM\ContactStatus\IContactStatusRepository");
         $this->input = [
-            "id" => 325,
-            "status" => "power",
+            "id" => 536,
+            "status" => "participant",
         ];
         $this->dto = new ContactStatusDto($this->input);
         $this->model = new ContactStatusModel($this->dto);
@@ -39,7 +39,7 @@ class ContactStatusServiceTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 9341;
+        $expected = 5372;
 
         $this->repository->expects($this->once())
             ->method("insert")
@@ -65,7 +65,7 @@ class ContactStatusServiceTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 4649;
+        $expected = 5299;
 
         $this->repository->expects($this->once())
             ->method("update")
@@ -91,7 +91,7 @@ class ContactStatusServiceTest extends TestCase
 
     public function testGet_ReturnsNull(): void
     {
-        $id = 5986;
+        $id = 9017;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -104,7 +104,7 @@ class ContactStatusServiceTest extends TestCase
 
     public function testGet_ReturnsModel(): void
     {
-        $id = 2128;
+        $id = 8340;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -137,8 +137,8 @@ class ContactStatusServiceTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 2763;
-        $expected = 3844;
+        $id = 9815;
+        $expected = 4914;
 
         $this->repository->expects($this->once())
             ->method("delete")

@@ -16,15 +16,15 @@ class UsersModelTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 6868,
-            "name_title" => "treatment",
-            "name_first" => "when",
-            "name_middle" => "relate",
-            "name_last" => "discuss",
-            "email" => "orivers@example.com",
-            "password" => "onto",
-            "user_roles" => 5169,
-            "user_status" => 8635,
+            "id" => 2029,
+            "name_title" => "listen",
+            "name_first" => "sell",
+            "name_middle" => "growth",
+            "name_last" => "or",
+            "email" => "amberjones@example.net",
+            "password" => "about",
+            "user_roles" => 6999,
+            "user_status" => 5483,
         ];
         $this->dto = new UsersDto($this->input);
         $this->model = new UsersModel($this->dto);
@@ -51,7 +51,7 @@ class UsersModelTest extends TestCase
 
     public function testSetId(): void
     {
-        $expected = 2559;
+        $expected = 6210;
         $model = $this->model;
         $model->setId($expected);
 
@@ -65,7 +65,7 @@ class UsersModelTest extends TestCase
 
     public function testSetNameTitle(): void
     {
-        $expected = "between";
+        $expected = "end";
         $model = $this->model;
         $model->setNameTitle($expected);
 
@@ -79,7 +79,7 @@ class UsersModelTest extends TestCase
 
     public function testSetNameFirst(): void
     {
-        $expected = "voice";
+        $expected = "moment";
         $model = $this->model;
         $model->setNameFirst($expected);
 
@@ -93,7 +93,7 @@ class UsersModelTest extends TestCase
 
     public function testSetNameMiddle(): void
     {
-        $expected = "visit";
+        $expected = "deep";
         $model = $this->model;
         $model->setNameMiddle($expected);
 
@@ -107,7 +107,7 @@ class UsersModelTest extends TestCase
 
     public function testSetNameLast(): void
     {
-        $expected = "what";
+        $expected = "seven";
         $model = $this->model;
         $model->setNameLast($expected);
 
@@ -121,7 +121,7 @@ class UsersModelTest extends TestCase
 
     public function testSetEmail(): void
     {
-        $expected = "rwalsh@example.com";
+        $expected = "kyle43@example.net";
         $model = $this->model;
         $model->setEmail($expected);
 
@@ -135,7 +135,7 @@ class UsersModelTest extends TestCase
 
     public function testSetPassword(): void
     {
-        $expected = "unit";
+        $expected = "radio";
         $model = $this->model;
         $model->setPassword($expected);
 
@@ -149,7 +149,7 @@ class UsersModelTest extends TestCase
 
     public function testSetUserRoles(): void
     {
-        $expected = 6536;
+        $expected = 1179;
         $model = $this->model;
         $model->setUserRoles($expected);
 
@@ -163,7 +163,7 @@ class UsersModelTest extends TestCase
 
     public function testSetUserStatus(): void
     {
-        $expected = 3316;
+        $expected = 9246;
         $model = $this->model;
         $model->setUserStatus($expected);
 

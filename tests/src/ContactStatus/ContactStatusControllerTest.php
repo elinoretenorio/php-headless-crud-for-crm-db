@@ -21,8 +21,8 @@ class ContactStatusControllerTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 1606,
-            "status" => "customer",
+            "id" => 7087,
+            "status" => "need",
         ];
         $this->dto = new ContactStatusDto($this->input);
         $this->model = new ContactStatusModel($this->dto);
@@ -56,7 +56,7 @@ class ContactStatusControllerTest extends TestCase
 
     public function testInsert_ReturnsResponse(): void
     {
-        $id = 4484;
+        $id = 5765;
         $expected = ["result" => $id];
         $args = [];
 
@@ -84,9 +84,9 @@ class ContactStatusControllerTest extends TestCase
 
     public function testUpdate_ReturnsResponse(): void
     {
-        $id = 6707;
+        $id = 9842;
         $expected = ["result" => $id];
-        $args = ["id" => 2653];
+        $args = ["id" => 3294];
 
         $this->service->expects($this->once())
             ->method("createModel")
@@ -113,7 +113,7 @@ class ContactStatusControllerTest extends TestCase
     public function testGet_ReturnsResponse(): void
     {
         $expected = ["result" => $this->model->jsonSerialize()];
-        $args = ["id" => 7775];
+        $args = ["id" => 313];
 
         $this->service->expects($this->once())
             ->method("get")
@@ -148,9 +148,9 @@ class ContactStatusControllerTest extends TestCase
 
     public function testDelete_ReturnsResponse(): void
     {
-        $id = 6315;
+        $id = 8818;
         $expected = ["result" => $id];
-        $args = ["id" => 4072];
+        $args = ["id" => 6098];
 
         $this->service->expects($this->once())
             ->method("delete")

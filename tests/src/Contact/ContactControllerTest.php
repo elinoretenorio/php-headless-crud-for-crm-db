@@ -21,36 +21,36 @@ class ContactControllerTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 126,
-            "contact_title" => "film",
-            "contact_first" => "agency",
-            "contact_middle" => "economic",
-            "contact_last" => "idea",
-            "lead_referral_source" => "maybe",
-            "date_of_initial_contact" => "2021-11-03",
-            "title" => "show",
-            "company" => "last",
-            "industry" => "trip",
-            "address" => "family",
-            "address_street_1" => "policy",
-            "address_street_2" => "pressure",
-            "address_city" => "social",
-            "address_state" => "develop",
-            "address_zip" => 1848,
-            "address_country" => "degree",
-            "phone" => "painting",
-            "email" => "danderson@example.com",
-            "status" => 2433,
-            "website" => "crime",
-            "linkedin_profile" => "loss",
-            "background_info" => "Career remain interest often power during. Others explain general address from respond need.",
-            "sales_rep" => 4914,
-            "rating" => 717.41,
-            "project_type" => "hear",
-            "project_description" => "Know near forward age.",
-            "proposal_due_date" => "2021-11-18",
-            "budget" => 965.71,
-            "deliverables" => "stop",
+            "id" => 2981,
+            "contact_title" => "fear",
+            "contact_first" => "travel",
+            "contact_middle" => "seat",
+            "contact_last" => "everyone",
+            "lead_referral_source" => "price",
+            "date_of_initial_contact" => "2021-10-26",
+            "title" => "ability",
+            "company" => "those",
+            "industry" => "option",
+            "address" => "anyone",
+            "address_street_1" => "ever",
+            "address_street_2" => "lose",
+            "address_city" => "heart",
+            "address_state" => "analysis",
+            "address_zip" => 5564,
+            "address_country" => "option",
+            "phone" => "rule",
+            "email" => "susan42@example.com",
+            "status" => 3939,
+            "website" => "save",
+            "linkedin_profile" => "appear",
+            "background_info" => "At would get training always parent draw. About place reality life. Condition huge yard maintain operation back almost.",
+            "sales_rep" => 2942,
+            "rating" => 954.52,
+            "project_type" => "subject",
+            "project_description" => "Call state sea end.",
+            "proposal_due_date" => "2021-10-28",
+            "budget" => 339.71,
+            "deliverables" => "police",
         ];
         $this->dto = new ContactDto($this->input);
         $this->model = new ContactModel($this->dto);
@@ -84,7 +84,7 @@ class ContactControllerTest extends TestCase
 
     public function testInsert_ReturnsResponse(): void
     {
-        $id = 8093;
+        $id = 1020;
         $expected = ["result" => $id];
         $args = [];
 
@@ -112,9 +112,9 @@ class ContactControllerTest extends TestCase
 
     public function testUpdate_ReturnsResponse(): void
     {
-        $id = 8230;
+        $id = 9805;
         $expected = ["result" => $id];
-        $args = ["id" => 7536];
+        $args = ["id" => 1066];
 
         $this->service->expects($this->once())
             ->method("createModel")
@@ -141,7 +141,7 @@ class ContactControllerTest extends TestCase
     public function testGet_ReturnsResponse(): void
     {
         $expected = ["result" => $this->model->jsonSerialize()];
-        $args = ["id" => 5720];
+        $args = ["id" => 6251];
 
         $this->service->expects($this->once())
             ->method("get")
@@ -176,9 +176,9 @@ class ContactControllerTest extends TestCase
 
     public function testDelete_ReturnsResponse(): void
     {
-        $id = 49;
+        $id = 4988;
         $expected = ["result" => $id];
-        $args = ["id" => 8392];
+        $args = ["id" => 9342];
 
         $this->service->expects($this->once())
             ->method("delete")

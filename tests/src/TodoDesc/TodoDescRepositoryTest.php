@@ -11,8 +11,8 @@ use CRM\TodoDesc\{ TodoDescDto, ITodoDescRepository, TodoDescRepository };
 
 class TodoDescRepositoryTest extends TestCase
 {
-    private $db;
-    private $result;
+    private MockObject $db;
+    private MockObject $result;
     private array $input;
     private TodoDescDto $dto;
     private ITodoDescRepository $repository;
@@ -22,8 +22,8 @@ class TodoDescRepositoryTest extends TestCase
         $this->db = $this->createMock("CRM\Database\IDatabase");
         $this->result = $this->createMock("CRM\Database\IDatabaseResult");
         $this->input = [
-            "id" => 8252,
-            "description" => "single",
+            "id" => 4723,
+            "description" => "pass",
         ];
         $this->dto = new TodoDescDto($this->input);
         $this->repository = new TodoDescRepository($this->db);
@@ -51,7 +51,7 @@ class TodoDescRepositoryTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 5053;
+        $expected = 3295;
 
         $sql = "INSERT INTO `todo_desc` (`description`)
                 VALUES (?)";
@@ -86,7 +86,7 @@ class TodoDescRepositoryTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 118;
+        $expected = 574;
 
         $sql = "UPDATE `todo_desc` SET `description` = ?
                 WHERE `id` = ?";
@@ -111,7 +111,7 @@ class TodoDescRepositoryTest extends TestCase
 
     public function testGet_ReturnsEmptyOnException(): void
     {
-        $id = 668;
+        $id = 3513;
 
         $this->db->method("prepare")
             ->will($this->throwException(new DatabaseException()));
@@ -122,7 +122,7 @@ class TodoDescRepositoryTest extends TestCase
 
     public function testGet_ReturnsDto(): void
     {
-        $id = 5960;
+        $id = 4053;
 
         $sql = "SELECT `id`, `description`
                 FROM `todo_desc` WHERE `id` = ?";
@@ -172,7 +172,7 @@ class TodoDescRepositoryTest extends TestCase
 
     public function testDelete_ReturnsFailedOnException(): void
     {
-        $id = 987;
+        $id = 4030;
         $expected = -1;
 
         $this->db->method("prepare")
@@ -184,8 +184,8 @@ class TodoDescRepositoryTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 2309;
-        $expected = 3462;
+        $id = 8735;
+        $expected = 6540;
 
         $sql = "DELETE FROM `todo_desc` WHERE `id` = ?";
 

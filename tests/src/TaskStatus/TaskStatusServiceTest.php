@@ -20,8 +20,8 @@ class TaskStatusServiceTest extends TestCase
     {
         $this->repository = $this->createMock("CRM\TaskStatus\ITaskStatusRepository");
         $this->input = [
-            "id" => 5178,
-            "status" => "produce",
+            "id" => 6425,
+            "status" => "public",
         ];
         $this->dto = new TaskStatusDto($this->input);
         $this->model = new TaskStatusModel($this->dto);
@@ -39,7 +39,7 @@ class TaskStatusServiceTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 9609;
+        $expected = 6915;
 
         $this->repository->expects($this->once())
             ->method("insert")
@@ -65,7 +65,7 @@ class TaskStatusServiceTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 3478;
+        $expected = 6391;
 
         $this->repository->expects($this->once())
             ->method("update")
@@ -91,7 +91,7 @@ class TaskStatusServiceTest extends TestCase
 
     public function testGet_ReturnsNull(): void
     {
-        $id = 4510;
+        $id = 3429;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -104,7 +104,7 @@ class TaskStatusServiceTest extends TestCase
 
     public function testGet_ReturnsModel(): void
     {
-        $id = 9551;
+        $id = 4923;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -137,8 +137,8 @@ class TaskStatusServiceTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 2791;
-        $expected = 1743;
+        $id = 5688;
+        $expected = 674;
 
         $this->repository->expects($this->once())
             ->method("delete")

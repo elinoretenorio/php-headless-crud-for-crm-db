@@ -20,36 +20,36 @@ class ContactServiceTest extends TestCase
     {
         $this->repository = $this->createMock("CRM\Contact\IContactRepository");
         $this->input = [
-            "id" => 5642,
-            "contact_title" => "police",
-            "contact_first" => "race",
-            "contact_middle" => "car",
-            "contact_last" => "or",
-            "lead_referral_source" => "analysis",
-            "date_of_initial_contact" => "2021-11-05",
-            "title" => "list",
-            "company" => "because",
-            "industry" => "strategy",
-            "address" => "level",
-            "address_street_1" => "war",
-            "address_street_2" => "middle",
-            "address_city" => "account",
-            "address_state" => "else",
-            "address_zip" => 2332,
-            "address_country" => "small",
-            "phone" => "nation",
-            "email" => "wmcdonald@example.net",
-            "status" => 5724,
-            "website" => "push",
-            "linkedin_profile" => "actually",
-            "background_info" => "Word unit paper campaign person. Town they single bit glass threat.",
-            "sales_rep" => 5372,
-            "rating" => 0.21,
-            "project_type" => "practice",
-            "project_description" => "Better future tough Congress friend score letter.",
-            "proposal_due_date" => "2021-11-15",
-            "budget" => 522.00,
-            "deliverables" => "research",
+            "id" => 6740,
+            "contact_title" => "area",
+            "contact_first" => "politics",
+            "contact_middle" => "say",
+            "contact_last" => "doctor",
+            "lead_referral_source" => "sort",
+            "date_of_initial_contact" => "2021-10-26",
+            "title" => "how",
+            "company" => "top",
+            "industry" => "by",
+            "address" => "final",
+            "address_street_1" => "method",
+            "address_street_2" => "above",
+            "address_city" => "them",
+            "address_state" => "option",
+            "address_zip" => 2913,
+            "address_country" => "activity",
+            "phone" => "ground",
+            "email" => "buchananlisa@example.org",
+            "status" => 9982,
+            "website" => "degree",
+            "linkedin_profile" => "here",
+            "background_info" => "Religious item employee. Language response traditional call speech keep clear.",
+            "sales_rep" => 6835,
+            "rating" => 959.00,
+            "project_type" => "improve",
+            "project_description" => "Security own newspaper subject.",
+            "proposal_due_date" => "2021-11-05",
+            "budget" => 214.00,
+            "deliverables" => "full",
         ];
         $this->dto = new ContactDto($this->input);
         $this->model = new ContactModel($this->dto);
@@ -67,7 +67,7 @@ class ContactServiceTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 3893;
+        $expected = 2317;
 
         $this->repository->expects($this->once())
             ->method("insert")
@@ -93,7 +93,7 @@ class ContactServiceTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 9949;
+        $expected = 8901;
 
         $this->repository->expects($this->once())
             ->method("update")
@@ -119,7 +119,7 @@ class ContactServiceTest extends TestCase
 
     public function testGet_ReturnsNull(): void
     {
-        $id = 9256;
+        $id = 9614;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -132,7 +132,7 @@ class ContactServiceTest extends TestCase
 
     public function testGet_ReturnsModel(): void
     {
-        $id = 7709;
+        $id = 9477;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -165,8 +165,8 @@ class ContactServiceTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 56;
-        $expected = 1989;
+        $id = 5910;
+        $expected = 656;
 
         $this->repository->expects($this->once())
             ->method("delete")

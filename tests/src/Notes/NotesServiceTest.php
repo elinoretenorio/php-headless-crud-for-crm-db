@@ -20,17 +20,17 @@ class NotesServiceTest extends TestCase
     {
         $this->repository = $this->createMock("CRM\Notes\INotesRepository");
         $this->input = [
-            "id" => 9198,
-            "date" => "2021-11-03",
-            "notes" => "Huge fly effort open.",
-            "is_new_todo" => 9527,
-            "todo_type_id" => 2847,
-            "todo_desc_id" => 9794,
-            "todo_due_date" => "thought",
-            "contact" => 157,
-            "task_status" => 3357,
-            "task_update" => "movement",
-            "sales_rep" => 990,
+            "id" => 5047,
+            "date" => "2021-10-25",
+            "notes" => "Television to series already.",
+            "is_new_todo" => 8189,
+            "todo_type_id" => 1485,
+            "todo_desc_id" => 1235,
+            "todo_due_date" => "place",
+            "contact" => 8489,
+            "task_status" => 6602,
+            "task_update" => "that",
+            "sales_rep" => 3374,
         ];
         $this->dto = new NotesDto($this->input);
         $this->model = new NotesModel($this->dto);
@@ -48,7 +48,7 @@ class NotesServiceTest extends TestCase
 
     public function testInsert_ReturnsId(): void
     {
-        $expected = 5898;
+        $expected = 2758;
 
         $this->repository->expects($this->once())
             ->method("insert")
@@ -74,7 +74,7 @@ class NotesServiceTest extends TestCase
 
     public function testUpdate_ReturnsRowCount(): void
     {
-        $expected = 9179;
+        $expected = 83;
 
         $this->repository->expects($this->once())
             ->method("update")
@@ -100,7 +100,7 @@ class NotesServiceTest extends TestCase
 
     public function testGet_ReturnsNull(): void
     {
-        $id = 6096;
+        $id = 5004;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -113,7 +113,7 @@ class NotesServiceTest extends TestCase
 
     public function testGet_ReturnsModel(): void
     {
-        $id = 3877;
+        $id = 1765;
 
         $this->repository->expects($this->once())
             ->method("get")
@@ -146,8 +146,8 @@ class NotesServiceTest extends TestCase
 
     public function testDelete_ReturnsRowCount(): void
     {
-        $id = 5413;
-        $expected = 9654;
+        $id = 5888;
+        $expected = 9676;
 
         $this->repository->expects($this->once())
             ->method("delete")

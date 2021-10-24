@@ -16,17 +16,17 @@ class NotesModelTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 7108,
-            "date" => "2021-11-21",
-            "notes" => "Inside information best ball.",
-            "is_new_todo" => 2230,
-            "todo_type_id" => 6947,
-            "todo_desc_id" => 9399,
-            "todo_due_date" => "throughout",
-            "contact" => 5802,
-            "task_status" => 5766,
-            "task_update" => "can",
-            "sales_rep" => 2110,
+            "id" => 1075,
+            "date" => "2021-11-12",
+            "notes" => "Drug discover year skin those health.",
+            "is_new_todo" => 8738,
+            "todo_type_id" => 7124,
+            "todo_desc_id" => 8213,
+            "todo_due_date" => "fly",
+            "contact" => 7213,
+            "task_status" => 1491,
+            "task_update" => "data",
+            "sales_rep" => 6099,
         ];
         $this->dto = new NotesDto($this->input);
         $this->model = new NotesModel($this->dto);
@@ -53,7 +53,7 @@ class NotesModelTest extends TestCase
 
     public function testSetId(): void
     {
-        $expected = 2901;
+        $expected = 2730;
         $model = $this->model;
         $model->setId($expected);
 
@@ -67,7 +67,7 @@ class NotesModelTest extends TestCase
 
     public function testSetDate(): void
     {
-        $expected = "2021-11-12";
+        $expected = "2021-10-25";
         $model = $this->model;
         $model->setDate($expected);
 
@@ -81,7 +81,7 @@ class NotesModelTest extends TestCase
 
     public function testSetNotes(): void
     {
-        $expected = "Summer effect speak pass.";
+        $expected = "Large different experience traditional measure wall such.";
         $model = $this->model;
         $model->setNotes($expected);
 
@@ -95,7 +95,7 @@ class NotesModelTest extends TestCase
 
     public function testSetIsNewTodo(): void
     {
-        $expected = 4648;
+        $expected = 9149;
         $model = $this->model;
         $model->setIsNewTodo($expected);
 
@@ -109,7 +109,7 @@ class NotesModelTest extends TestCase
 
     public function testSetTodoTypeId(): void
     {
-        $expected = 4684;
+        $expected = 3571;
         $model = $this->model;
         $model->setTodoTypeId($expected);
 
@@ -123,7 +123,7 @@ class NotesModelTest extends TestCase
 
     public function testSetTodoDescId(): void
     {
-        $expected = 6859;
+        $expected = 8728;
         $model = $this->model;
         $model->setTodoDescId($expected);
 
@@ -137,7 +137,7 @@ class NotesModelTest extends TestCase
 
     public function testSetTodoDueDate(): void
     {
-        $expected = "dinner";
+        $expected = "subject";
         $model = $this->model;
         $model->setTodoDueDate($expected);
 
@@ -151,7 +151,7 @@ class NotesModelTest extends TestCase
 
     public function testSetContact(): void
     {
-        $expected = 2730;
+        $expected = 4540;
         $model = $this->model;
         $model->setContact($expected);
 
@@ -165,7 +165,7 @@ class NotesModelTest extends TestCase
 
     public function testSetTaskStatus(): void
     {
-        $expected = 546;
+        $expected = 4729;
         $model = $this->model;
         $model->setTaskStatus($expected);
 
@@ -179,7 +179,7 @@ class NotesModelTest extends TestCase
 
     public function testSetTaskUpdate(): void
     {
-        $expected = "federal";
+        $expected = "nor";
         $model = $this->model;
         $model->setTaskUpdate($expected);
 
@@ -193,7 +193,7 @@ class NotesModelTest extends TestCase
 
     public function testSetSalesRep(): void
     {
-        $expected = 7468;
+        $expected = 4351;
         $model = $this->model;
         $model->setSalesRep($expected);
 

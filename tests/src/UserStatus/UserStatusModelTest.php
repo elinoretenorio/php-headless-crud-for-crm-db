@@ -16,8 +16,8 @@ class UserStatusModelTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 9308,
-            "status" => "model",
+            "id" => 1003,
+            "status" => "beat",
         ];
         $this->dto = new UserStatusDto($this->input);
         $this->model = new UserStatusModel($this->dto);
@@ -44,7 +44,7 @@ class UserStatusModelTest extends TestCase
 
     public function testSetId(): void
     {
-        $expected = 5093;
+        $expected = 8820;
         $model = $this->model;
         $model->setId($expected);
 
@@ -58,7 +58,7 @@ class UserStatusModelTest extends TestCase
 
     public function testSetStatus(): void
     {
-        $expected = "maintain";
+        $expected = "tax";
         $model = $this->model;
         $model->setStatus($expected);
 

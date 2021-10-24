@@ -21,15 +21,15 @@ class UsersControllerTest extends TestCase
     protected function setUp(): void
     {
         $this->input = [
-            "id" => 5622,
-            "name_title" => "know",
-            "name_first" => "federal",
-            "name_middle" => "recent",
-            "name_last" => "experience",
-            "email" => "cheyenne17@example.net",
-            "password" => "adult",
-            "user_roles" => 6832,
-            "user_status" => 4268,
+            "id" => 4495,
+            "name_title" => "old",
+            "name_first" => "affect",
+            "name_middle" => "drop",
+            "name_last" => "yourself",
+            "email" => "chadbell@example.com",
+            "password" => "mention",
+            "user_roles" => 8850,
+            "user_status" => 7891,
         ];
         $this->dto = new UsersDto($this->input);
         $this->model = new UsersModel($this->dto);
@@ -63,7 +63,7 @@ class UsersControllerTest extends TestCase
 
     public function testInsert_ReturnsResponse(): void
     {
-        $id = 9175;
+        $id = 7839;
         $expected = ["result" => $id];
         $args = [];
 
@@ -91,9 +91,9 @@ class UsersControllerTest extends TestCase
 
     public function testUpdate_ReturnsResponse(): void
     {
-        $id = 8714;
+        $id = 9352;
         $expected = ["result" => $id];
-        $args = ["id" => 3477];
+        $args = ["id" => 600];
 
         $this->service->expects($this->once())
             ->method("createModel")
@@ -120,7 +120,7 @@ class UsersControllerTest extends TestCase
     public function testGet_ReturnsResponse(): void
     {
         $expected = ["result" => $this->model->jsonSerialize()];
-        $args = ["id" => 7765];
+        $args = ["id" => 2016];
 
         $this->service->expects($this->once())
             ->method("get")
@@ -155,9 +155,9 @@ class UsersControllerTest extends TestCase
 
     public function testDelete_ReturnsResponse(): void
     {
-        $id = 6443;
+        $id = 6209;
         $expected = ["result" => $id];
-        $args = ["id" => 2734];
+        $args = ["id" => 6514];
 
         $this->service->expects($this->once())
             ->method("delete")
